@@ -9,13 +9,13 @@ function MessageHistory( {list} ) {
   let history = list.map( (message, index) => {
     switch (message.type) {
       case 'message':
-        return <Message from = {message.from} message = {message} />
+        return <Message from = {message.from} message = {message} key = {message.id} />
         break;
       case 'response':
-        return <Response from = {message.from} message = {message} />
+        return <Response from = {message.from} message = {message} key = {message.id} />
         break;
       case 'typing':
-        return <Typing from = {message.from} message = {message} />
+        return <Typing from = {message.from} message = {message} key = {message.id} />
         break;
     }
 

@@ -5,7 +5,7 @@ function getRating(rating) {
   } else {
     const res = [];
     for (let i = 0; i < rating.value; i++) {
-      res.push(<li key={rating.id}><Star/></li>);
+      res.push(<li key={i}><Star/></li>);
     }
     return res;
   }
